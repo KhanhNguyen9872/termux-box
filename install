@@ -19,7 +19,9 @@ mkdir -p /sdcard/termux-box
 
 echo ""
 echo "Change repo apt termux"
-echo "deb https://packages-cf.termux.org/apt/termux-main/ stable main" > ~/../usr/etc/apt/sources.list
+printf "deb https://packages-cf.termux.org/apt/termux-main/ stable main\n" > ~/../usr/etc/apt/sources.list
+printf "deb https://packages-cf.termux.dev/apt/termux-root root stable\n" >> ~/../usr/etc/apt/sources.list
+printf "deb https://packages-cf.termux.dev/apt/termux-x11 x11 main\n" >> ~/../usr/etc/apt/sources.list
 
 echo ""
 echo "Updating termux packages"
