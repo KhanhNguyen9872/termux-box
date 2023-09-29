@@ -30,7 +30,7 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
 fi
 
 if [ ! -e update-timestamp ]; then
-    latestupdate=$(curl --connect-timeout 6 -s https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp)
+    latestupdate=$(curl --connect-timeout 6 -s https://raw.githubusercontent.com/KhanhNguyen9872/termux-box/main/update-timestamp)
     if [[ "$latestupdate" = "" ]]; then
         echo "No internet connection, try again"
         exit
@@ -55,7 +55,7 @@ else echo "$minutes minutes ago"; fi
 
 sleep 0.5
 
-latestupdate=$(curl --connect-timeout 6 -s https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp)
+latestupdate=$(curl --connect-timeout 6 -s https://raw.githubusercontent.com/KhanhNguyen9872/termux-box/main/update-timestamp)
 if [[ "$latestupdate" = "" ]]; then
  echo "Could not check for updates"
 else
@@ -65,7 +65,7 @@ else
         echo -n "A new patch is available! Do you want to install it? (Y/n) "
         read sel
         if [ "$sel" = "Y" ] || [ "$sel" = "y" ]; then
-            curl -s -o ~/y https://raw.githubusercontent.com/olegos2/termux-box/main/scripts/patch
+            curl -s -o ~/y https://raw.githubusercontent.com/KhanhNguyen9872/termux-box/main/scripts/patch
             chmod +x ~/y
             if ! ~/y; then
             echo "Update failed. If this problem remains, try to force stop termux"
