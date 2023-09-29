@@ -18,6 +18,10 @@ done
 mkdir -p /sdcard/termux-box
 
 echo ""
+echo "Change repo apt termux"
+echo "deb https://packages-cf.termux.org/apt/termux-main/ stable main" > ~/../usr/etc/apt/sources.list
+
+echo ""
 echo "Updating termux packages"
 apt-get clean
 apt-get update >/dev/null 2>&1
