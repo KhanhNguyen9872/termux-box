@@ -14,7 +14,7 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
     echo "Download failed, restart termux-box"
     exit
     else
-    tar -xf ubuntu-fs/opt/box/old-box.tar.xz -C ubuntu-fs/usr/local/bin
+    tar -xf ubuntu-fs/opt/box/new-box.tar.xz -C ubuntu-fs/usr/local/bin
     fi
     ;;
     2)
@@ -22,7 +22,7 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
     echo "Download failed, restart termux-box"
     exit
     else
-    tar -xf ubuntu-fs/opt/box/old-box.tar.xz -C ubuntu-fs/usr/local/bin
+    tar -xf ubuntu-fs/opt/box/new-box.tar.xz -C ubuntu-fs/usr/local/bin
     fi
     ;;
     3)
@@ -30,7 +30,7 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
     echo "Download failed, restart termux-box"
     exit
     else
-    tar -xf ubuntu-fs/opt/box/old-box.tar.xz -C ubuntu-fs/usr/local/bin
+    tar -xf ubuntu-fs/opt/box/new-box.tar.xz -C ubuntu-fs/usr/local/bin
     fi
     ;;
     esac
