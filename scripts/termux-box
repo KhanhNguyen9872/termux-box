@@ -7,7 +7,7 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
     echo "1) 8.17 staging"
     echo "2) 8.17 ge-custom"
     echo "3) 8.0 proton (Experimental)"
-    echo "4) 8.0-4 proton (Stable)"
+    echo "4) 8.0-4 proton (Recommend for WitchSpring R)"
     read opcode
     case $opcode in
     1)
