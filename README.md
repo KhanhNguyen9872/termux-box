@@ -16,6 +16,7 @@ After installation the start command in termux is `termux-box`
 Download and install
 [Termux](https://f-droid.org/repo/com.termux_118.apk),
 [Termux-X11](https://raw.githubusercontent.com/olegos2/termux-box/main/components/termux-x11-arm64-v8a-debug.apk)
+[InputBridge](https://github.com/KhanhNguyen9872/termux-box/raw/main/components/InputBridge_0.1.9.9.apk)
 
 Open termux and paste command
 
