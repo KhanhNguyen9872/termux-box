@@ -4,13 +4,31 @@ cd $HOME/termux-box
 
 if [ ! -e ubuntu-fs/opt/wine ]; then
     echo "Select which Wine to download"
-    echo "1) 8.17 staging"
-    echo "2) 8.17 ge-custom"
-    echo "3) 8.0 proton (Experimental)"
-    echo "4) 8.0-4 proton (Recommend for WitchSpring R)"
+    echo "1) 8.2 staging"
+    echo "2) 8.14 ge-custom"
+    echo "3) 8.17 staging"
+    echo "4) 8.17 ge-custom"
+    echo "5) 8.0 proton (Experimental)"
+    echo "6) 8.0-4 proton (Recommend for WitchSpring R)"
     read opcode
     case $opcode in
     1)
+    if ! wget -q --show-progress https://github.com/Kron4ek/Wine-Builds/releases/download/8.2/wine-8.2-staging-amd64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
+    echo "Download failed, restart termux-box"
+    exit
+    else
+    tar -xf ubuntu-fs/opt/box/old-box.tar.xz -C ubuntu-fs/usr/local/bin
+    fi
+    ;;
+    2)
+    if ! wget -q --show-progress https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-14/wine-lutris-GE-Proton8-14-x86_64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
+    echo "Download failed, restart termux-box"
+    exit
+    else
+    tar -xf ubuntu-fs/opt/box/new-box.tar.xz -C ubuntu-fs/usr/local/bin
+    fi
+    ;;
+    3)
     if ! wget -q --show-progress https://github.com/Kron4ek/Wine-Builds/releases/download/8.17/wine-8.17-staging-amd64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
     echo "Download failed, restart termux-box"
     exit
@@ -18,7 +36,7 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
     tar -xf ubuntu-fs/opt/box/box_10_07_23.tar.xz -C ubuntu-fs/usr/local/bin
     fi
     ;;
-    2)
+    4)
     if ! wget -q --show-progress https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-17/wine-lutris-GE-Proton8-17-x86_64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
     echo "Download failed, restart termux-box"
     exit
@@ -26,7 +44,7 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
     tar -xf ubuntu-fs/opt/box/box_10_07_23.tar.xz -C ubuntu-fs/usr/local/bin
     fi
     ;;
-    3)
+    5)
     if ! wget -q --show-progress https://github.com/Kron4ek/Wine-Builds/releases/download/proton-exp-8.0/wine-proton-exp-8.0-amd64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
     echo "Download failed, restart termux-box"
     exit
@@ -34,7 +52,7 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
     tar -xf ubuntu-fs/opt/box/box_10_07_23.tar.xz -C ubuntu-fs/usr/local/bin
     fi
     ;;
-    4)
+    6)
     if ! wget -q --show-progress https://github.com/KhanhNguyen9872/termux-box/releases/download/wine/wine-proton-8.0-4-amd64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
     echo "Download failed, restart termux-box"
     exit
