@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rm -rf x 2>/dev/null
 cd
 echo ""
 echo "Сlick on allow to proceed"
