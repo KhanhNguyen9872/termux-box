@@ -60,6 +60,9 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
     tar -xf ubuntu-fs/opt/box/box_10_07_23.tar.xz -C ubuntu-fs/usr/local/bin
     fi
     ;;
+    *)
+    exit 1
+    ;;
     esac
 fi
 
