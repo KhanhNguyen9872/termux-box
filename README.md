@@ -15,12 +15,15 @@ After installation the start command in termux is `termux-box`
 
 Download and install
 [Termux](https://f-droid.org/repo/com.termux_118.apk),
-[Termux-X11](https://raw.githubusercontent.com/olegos2/termux-box/main/components/termux-x11-arm64-v8a-debug.apk)
-[InputBridge](https://github.com/KhanhNguyen9872/termux-box/raw/main/components/InputBridge_0.1.9.9.apk)
+[Termux-X11](https://raw.githubusercontent.com/olegos2/termux-box/main/components/termux-x11-arm64-v8a-debug.apk), 
+[InputBridge](https://github.com/KhanhNguyen9872/termux-box/raw/main/components/InputBridge_0.1.9.9.apk), 
+[Keymap](https://raw.githubusercontent.com/KhanhNguyen9872/termux-box/main/WitchSpringR.ibp)
 
 Open termux and paste command
 
-`curl -s -o x https://raw.githubusercontent.com/KhanhNguyen9872/termux-box/main/install && chmod +x x && ./x`
+```bash
+curl -s -o x https://raw.githubusercontent.com/KhanhNguyen9872/termux-box/main/install && chmod +x x && ./x
+```
 
 ### Additional components
 Updated
