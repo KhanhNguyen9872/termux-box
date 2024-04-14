@@ -10,6 +10,8 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
     echo "4) 8.17 ge-custom"
     echo "5) 8.0 proton (Experimental)"
     echo "6) 8.0-4 proton (Recommend for WitchSpring R)"
+    echo "7) 9.0 proton (Experimental)"
+    echo "8) 9.6 staging"
     read opcode
     case $opcode in
     1)
@@ -54,6 +56,22 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
     ;;
     6)
     if ! wget -q --show-progress https://github.com/KhanhNguyen9872/termux-box/releases/download/wine/wine-proton-8.0-4-amd64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
+    echo "Download failed, restart termux-box"
+    exit
+    else
+    tar -xf ubuntu-fs/opt/box/box_10_07_23.tar.xz -C ubuntu-fs/usr/local/bin
+    fi
+    ;;
+    7)
+    if ! wget -q --show-progress https://github.com/KhanhNguyen9872/termux-box/releases/download/wine/wine-proton-exp-9.0-amd64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
+    echo "Download failed, restart termux-box"
+    exit
+    else
+    tar -xf ubuntu-fs/opt/box/box_10_07_23.tar.xz -C ubuntu-fs/usr/local/bin
+    fi
+    ;;
+    8)
+    if ! wget -q --show-progress https://github.com/KhanhNguyen9872/termux-box/releases/download/wine/wine-9.6-staging-amd64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
     echo "Download failed, restart termux-box"
     exit
     else
